@@ -1,12 +1,10 @@
 import { useState } from 'react';
-const App = () => {
+const AppCheckbox = () => {
   const [value, setValue] = useState({
     normal: '',
     texto: '',
     select: '',
-    check: false,
-    estado: 'triste',
-    estado2: ''
+    check: false
   });
 
   const handleChange = ({ target }) => {
@@ -35,22 +33,8 @@ const App = () => {
         onChange={handleChange}
         checked={value.check}
       />
-      <div onChange={handleChange}>
-        <label>CHANCHO</label>
-        <input name="estado2" type="radio" value="triste" />Triste
-        <input name="estado2" type="radio" value="feliz" />Feliz
-        <input name="estado2" type="radio" value="emocionado" />Emocionado
-      </div>
-      <div>
-        <label>CHANCHO</label>
-        <input onChange={handleChange} name="estado" type="radio" value="triste" checked={value.estado === "triste"}/>Triste
-        <input onChange={handleChange} name="estado" type="radio" value="feliz" checked={value.estado === "feliz"}/>Feliz
-        <input onChange={handleChange} name="estado" type="radio" value="emocionado" checked={value.estado === "emocionado"}/>Emocionado
-      </div>
-
-
     </div>
   )
 }
 
-export default App;
+export default AppCheckbox;
